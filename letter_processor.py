@@ -59,13 +59,13 @@ class LetterProcessor:
             writer.writerows(archive)
 
     # membuat file text dari pdf
-    def make_letter_text(self, model):
+    def make_letter_text(self, ocr_model):
         for file in tqdm(os.listdir(self.folder_path)):
             if file.endswith('.pdf') and not (file in self.history):
                 error = False # untuk mengetahui apakah proses error atau tidak
                 try:
                     upload_file = genai.upload_file(self.folder_path + '/' + file)
-                    response = model.generate_content(['', upload_file])
+                    response = ocr_model.generate_content(['', upload_file])
                 except Exception as e:
                     print(f"Error processing {file}: {e}")
                     error = True
