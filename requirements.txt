@@ -1,3 +1,4 @@
 img2pdf
 tqdm
 google-generativeai
+pillow
