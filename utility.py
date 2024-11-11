@@ -13,11 +13,12 @@ def file_sort(folder_path):
      return filenames
 
 # mengambil daftar folder
+# menggabung nama file dan folder tempatnya
 def separate_files_and_folders(folder_path):
      folders = []
      files = []
      for file in os.listdir(folder_path):
-          if not file.endswith('.png'):
+          if os.path.isdir(folder_path+'/'+file):
                folders.append(folder_path+'/'+file)
           else:
                files.append(folder_path+'/'+file)
