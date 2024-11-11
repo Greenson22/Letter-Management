@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "tomoki1207.pdf",
+        "formulahendry.code-runner",
+        "googlecloudtools.cloudcode",
+        "pkief.material-icon-theme",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "ms-python.debugpy"
+    ]
+}
